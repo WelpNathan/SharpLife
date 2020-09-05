@@ -1,0 +1,28 @@
+﻿<Window x:Class="GameOfLife.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife.UI"
+        mc:Ignorable="d"
+        Title="Game of Life | WelpNathan" Loaded="MainWindow_OnLoaded" WindowStartupLocation="CenterScreen" Height="720" Width="1280" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60px"/>
+        </Grid.RowDefinitions>
+        <Grid Name="GameGrid" Row="0" Background="#000">
+            
+        </Grid>
+        <Grid Row="1">
+            <Button Margin="5, 0, 0, 0" HorizontalAlignment="Left" Name="StartBtn" Height="40" Width="80" Click="StartBtn_OnClick">
+                <TextBlock>START</TextBlock>
+            </Button>
+            <Button IsEnabled="False" Margin="90, 0, 0, 0" HorizontalAlignment="Left" Name="ResetBtn" Height="40" Width="80" Click="ResetBtn_OnClick">
+                <TextBlock>RESET</TextBlock>
+            </Button>
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 5, 5">Made by WelpNathan</TextBlock>
+            <TextBlock Name="GenerationTag" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 5, 18" FontWeight="Bold">Generation 0</TextBlock>
+        </Grid>
+    </Grid>
+</Window>
